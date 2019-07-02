@@ -34,9 +34,11 @@
         data: {},
         methods:{
             check: function () {
-                console.log(this.errors);
-                console.log(this.$validator);
                 this.$validator.checkAll();
+                console.log(this.errors);
+                console.log(this.errors.errors.length);
+                console.log(this.$validator);
+
             },
         }
     })
