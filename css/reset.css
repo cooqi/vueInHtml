@@ -1,0 +1,57 @@
+/*
+    严禁非项目搭建人员修改此文件！！！！！！！！！！！！！
+*/
+
+body,html{padding: 0;margin: 0;font-family: '微软雅黑'}
+*{padding: 0;margin: 0;box-sizing: border-box}
+a{color: inherit;text-decoration: none}
+ul,li,p,h3,h4,h5,h6,dl,dd{margin: 0;padding: 0}
+ul,li{list-style: none}
+a:hover{color: #14a0ef;text-decoration: none}
+em, i {
+    font-style: normal;
+}
+*:focus { outline: none; }
+input {outline:none;}
+
+/*超过2行隐藏，并用...代替*/
+.overstyle{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/*超过1行隐藏，并用...代替*/
+.over-one{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+/*清除浮动*/
+.clearfix {
+    /* 触发 hasLayout */
+    zoom: 1;
+}
+.clearfix:after{
+    content: "020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/*覆盖boots样式*/
+.tooltip{font-size: 20px;z-index: 100!important;}
+.form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+.modal-header{background: #619af3;color: #fff;border-radius: 6px 6px 0 0;}
+
+
+
+
