@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .mt-input{
+            display: inline-block;
+            border: 1px solid #ccc;
+            line-height: 20px;
+            font-size: 12px;
+            color: #333;
+            vertical-align: middle;
+        }
+        .mt-valdate__error{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div id="index">
+    <my-checkbox></my-checkbox>
+    <input class="mt-input"  v-bind:class="{'mt-valdate__error':errors.has('test2')}" type="text" id="email2"   v-validate data-rules= "required"  validate-name="test2">
+    <span v-if="errors.has('test2')" >{{errors.get('test2')}}</span>
+    <input type="submit" class="login-btn" value="验证"  @click="check();">
+</div>
+<script src="js/vue.js"></script>
+<script src="./components/components.js"></script>
+<script type="module">
+    import validate from './plugs/validate-master/src/plugin.js'
+    Vue.use(validate);
+    new Vue({
+        el:'#index',
+        data: {},
+        methods:{
+            check: function () {
+                console.log(this.errors);
+                console.log(this.$validator);
+                this.$validator.checkAll();
+            },
+        }
+    })
+</script>
+</body>
+</html>
